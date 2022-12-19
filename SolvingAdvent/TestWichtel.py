@@ -10,3 +10,4 @@ class TestWichtel():
 
     def test_getPuzzleInput_Correct(self):
         self.Helfer.getPuzzleInput('02')
+
