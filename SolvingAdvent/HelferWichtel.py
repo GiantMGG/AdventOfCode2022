@@ -13,4 +13,15 @@ class HelferWichtel():
         except EnvironmentError:
             raise Exception('Datei mit diesem Namen existiert nicht')
         return lines
-        
+
+    def getPuzzleInputTotal(self,Tuernummer:str) -> list[str]:
+        if not Tuernummer:
+            raise Exception('Kein gültiger String als Türnummer angegeben')
+        pathToInput = './Input/'
+        pathToFile = 'day' + Tuernummer +'.txt'
+        try:
+            with open(pathToInput + pathToFile) as file:
+                lines = file.read()
+        except EnvironmentError:
+            raise Exception('Datei mit diesem Namen existiert nicht')
+        return lines        
